@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- main css -->
+  <link rel="stylesheet" href="style.css">
+  <title>To Do List</title>
+</head>
+
+<body>
+  <!-- background page -->
+  <div class="roundSwitch">
+    <label class="switch">
+      <input type="checkbox" id="checkbox" onclick="check()">
+      <span class="slider round"></span>
+    </label>
+    <p class="txtDark">Try Dark Theme</p>
+  </div>
+  <!-- background page -->
+  <!-- Alert message -->
+  <div class="alert alert-danger" role="alert">
+    You must enter task
+  </div>
+  <div class="alert alert-warning" role="alert">
+    Item removed
+  </div>
+  <div class="alert alert-primary" role="alert">
+    Item added
+  </div>
+  <!-- Alert message -->
+  <div id="myDiv" class="header container">
+    <h2 class="display-2 my-5 text-center text-primary">My To Do List</h2>
+    <input type="text" name="task" id="myInput" class="input-group text-center" placeholder="Title...">
+    <button type="button" class="addBtn btn btn-outline-primary my-3" name="button" onclick="addElement()">ADD</button>
+    <ul id="myUl">
+      <li class="list-group-item list-group-item-action checked">Be senior JavaScript</li>
+      <li class="list-group-item list-group-item-action">3 projects by vanillia JavaScript</li>
+      <li class="list-group-item list-group-item-action">Learn Reactjs</li>
+      <li class="list-group-item list-group-item-action">Learn sass & pugjs</li>
+    </ul>
+  </div>
+  <script src="./jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="./script.js" charset="utf-8"></script>
+</body>
+
+</html>

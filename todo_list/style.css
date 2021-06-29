@@ -1,0 +1,162 @@
+ul {
+  padding-left: 0;
+}
+.my-5 {
+  margin-top: 6rem !important;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  -moz-transform: translateX(26px);
+  -o-transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+  -webkit-border-radius: 34px;
+  -moz-border-radius: 34px;
+  -ms-border-radius: 34px;
+  -o-border-radius: 34px;
+}
+
+.txtDark {
+  position: absolute;
+    left: 65px;
+    top: 87px;
+    color: red;
+    font-size: 30px;
+}
+
+/* alert message */
+.alert-danger,
+.alert-warning,
+.alert-primary {
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  width: 80%;
+  text-align: center;
+  display: none;
+}
+
+ul li {
+  cursor: pointer;
+  padding-left: 35px !important;
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+ul li.checked:hover {
+  background-color: #888 !important;
+  color: #fff !important;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.list-group-item .close {
+  position: absolute;
+  top: 5px;
+  right: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 770px) {
+  .txtDark {
+    top: 90px;
+    font-size: 25px;
+  }
+  .header h2 {
+    padding-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header h2 {
+    padding-top: 70px;
+  }
+}
